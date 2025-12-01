@@ -1,5 +1,5 @@
 # SmartMetrics-AI-Multi-Agent-Intelligence-Engine
-![thumbnail](assets/<img width="1024" height="1024" alt="SmartMetrics AI Multi-Agent Intelligence Engine" src="https://github.com/user-attachments/assets/8e27a11c-3cfb-4b05-980e-323dd92bc4fc" />
+(assets/<img width="1024" height="1024" alt="SmartMetrics AI Multi-Agent Intelligence Engine" src="https://github.com/user-attachments/assets/8e27a11c-3cfb-4b05-980e-323dd92bc4fc" />
 )
 
 An autonomous multi-agent pipeline that collects data, analyzes competitors, builds strategies, and generates business reports.
