@@ -16,9 +16,8 @@ This notebook contains the ENTIRE AI agent workflow in one place, including:
 
 
 
-# ============================================================
 # 1️⃣.0 IMPORTS 
-# ============================================================
+
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 
@@ -30,9 +29,8 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 
-# ============================================================
-# 1️⃣.1️⃣ IMPORTS & ENVIRONMENT SETUP
-# ============================================================
+1️⃣ IMPORTS & ENVIRONMENT SETUP
+
 
 import os
 import pandas as pd
@@ -52,9 +50,9 @@ api_key = user_secrets.get_secret("GEMINI_API_KEY") # This retrieves the key sec
 genai.configure(api_key=api_key) # Pass the retrieved key directly
 llm = genai.GenerativeModel("gemini-2.5-pro")
 
-# ============================================================
+
 # 1️⃣.2️⃣ MEMORY BANK (SHARED CONTEXT FOR ALL AGENTS)
-# ============================================================
+
 
 # Memory Management (Shared Digital Notepad)
 
@@ -73,9 +71,9 @@ memory = MemoryBank()
 
 
 
-# ============================================================
+
 # 1️⃣ DATA COLLECTION AGENT
-# ============================================================
+
 
 def data_collection_agent(input_text):
     """Collects competitor info from Gemini based on input URL or description."""
@@ -102,9 +100,9 @@ def data_collection_agent(input_text):
     return response
 
 
-# ============================================================
+
 # 2️⃣ ANALYSIS AGENT
-# ============================================================
+
 
 
 def analysis_agent(data_list):
@@ -126,9 +124,9 @@ def analysis_agent(data_list):
 
 
 
-# ============================================================
+
 #3️⃣ STRATEGY AGENT
-# ============================================================
+
 
 
 def strategy_agent(analysis):
@@ -150,9 +148,9 @@ def strategy_agent(analysis):
 
 
 
-# ============================================================
+
 #4️⃣.REPORT GENERATION AGENT
-# ============================================================
+
 
 def report_agent(final_data):
     """Generates a professional structured report."""
@@ -173,9 +171,8 @@ def report_agent(final_data):
     return response
 
 
-# ============================================================
 # 5️⃣. FULL AUTONOMOUS PIPELINE
-# ============================================================
+
 #   — Autonomous Pipeline (Agent Collaboration)
 
 def ai_competitor_intelligence_pipeline(inputs):
@@ -205,7 +202,6 @@ def ai_competitor_intelligence_pipeline(inputs):
     
     return report
 
-# ============================================================
 # 6️⃣. 8.RUN NOTEBOOK
 # ============================================================
 
